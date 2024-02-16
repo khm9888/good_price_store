@@ -1,0 +1,1 @@
+# good_price_store-github.io
