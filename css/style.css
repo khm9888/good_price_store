@@ -143,15 +143,15 @@ aside>h1 {
     margin-right: 40px;
     margin-top: 40px;
 }
-.div_iframe1{
+/* .div_iframe_1{
     position: relative;
 }
-.div_iframe2{
+.div_iframe_2{
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-}
+} */
 
 #header_title{
     color:black;

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> 
+    </script>
+    <script>
+        
+        function get_id() {
+            let id_num
+            id_num = ("#id_num").val()
+            // id값을 sql에 넘기는 코드 적용
+        }
+
+        function open_close_function(){            
+            
+            if ($('#open_close_button').val()=="열림")
+            {
+                $('#open_close_button').val("닫힘")
+                $('#aside').show()
+            }
+            else{
+                $('#open_close_button').val("열림")
+                $('#aside').hide()
+            }
+        }
+    </script>
+    <script>
+        function use_location(){
+
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <div class="dawn"> 
+    </div> -->
+    
+
+    
+    <div id="wrap">
+        <header>
+            <a class="logo" href="#home">
+                <!-- <img src="https://poiemaweb.com/img/logo.png" height="36px"> -->
+                <h1 id="header_title">착한 가격 업소</h1>
+            </a>
+            <nav class="next_title">
+                <h1>답답해서 제가 만들었습니다
+                    사이트 크기 조절 등은 아직 못해요 :(
+                        정보가 다를 수 있으니, 크로스 체크는 필수!
+                </h1>
+
+            </nav>
+            <nav>
+                <ul class="nav-items">
+                    <!-- <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        <div id="content-wrap">
+            <!-- <aside id="aside">
+                <h1>Aside</h1>
+                <ul>
+                    <li><a href="#" class="active">MAP</a></li>
+                    <li><a href="#">리스트</a></li>
+                </ul>
+            </aside>
+ -->
+            <!-- <input type="button" value="닫힘" id="open_close_button" onclick =open_close_function()> -->
+            <section id="section">
+                <!-- <article class="combo-boxes">
+                    <input type="search" name="" id="id_num">
+                    <input type="button" value="검색" onclick="get_id()">
+                </article> -->
+             
+                <article id="map">
+                    <!-- 1. 임베드해서 pbi를 넣는다. -->
+                    <div class="div_iframe_1">
+                        <h1>MAP</h1> 
+                        <div class="div_iframe_2">
+                        <iframe title="good_price" width="1400" height="700" src="https://app.powerbi.com/view?r=eyJrIjoiM2I0NmNjZjctMzcwMS00NGE4LWIzNzEtZDcxNjYzNmY1Mzc0IiwidCI6IjMwMjZlOWFlLTFjNmYtNDhiYy1hYTQwLTcxMTQ4NGQ5NzYzOSIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <!-- <footer>footer</footer> -->
+    </div>
+</body>
+
+</html>
