@@ -58,29 +58,6 @@ nav {
     color: rgba(0, 0, 0, 0.8);
 }
 
-/*
-div {
-    width: 100vw;
-    height: 100vh;
-}
-*/
-
-.dawn {
-    /* Old browsers */
-    /* background: #b3cae5; */
-    /* FF3.6+ */
-    /* background: -moz-linear-gradient(-45deg, #b3cae5 12%, #dbdde4 46%, #e4e3e4 70%, #f7ddbb 94%, #efcab2 100%); */
-    /* Chrome,Safari4+ */
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(12%, #b3cae5), color-stop(46%, #dbdde4), color-stop(70%, #e4e3e4), color-stop(94%, #f7ddbb), color-stop(100%, #efcab2));
-    /* Chrome10+,Safari5.1+ */
-    /* background: -webkit-linear-gradient(-45deg, #b3cae5 12%, #dbdde4 46%, #e4e3e4 70%, #f7ddbb 94%, #efcab2 100%); */
-    /* Opera 11.10+ */
-    /* background: -o-linear-gradient(-45deg, #b3cae5 12%, #dbdde4 46%, #e4e3e4 70%, #f7ddbb 94%, #efcab2 100%); */
-    /* IE10+ */
-    /* background: -ms-linear-gradient(-45deg, #b3cae5 12%, #dbdde4 46%, #e4e3e4 70%, #f7ddbb 94%, #efcab2 100%); */
-    /* W3C */
-    /* background: linear-gradient(135deg, #b3cae5 12%, #dbdde4 46%, #e4e3e4 70%, #f7ddbb 94%, #efcab2 100%); */
-}
 
 /* clearfix */
 #content-wrap:after {
@@ -107,52 +84,11 @@ aside {
     background-color: #333;
 }
 
-aside > ul {
-    width: 200px;
-}
-
-aside > ul > li > a {
-    display: block;
-    color: #fff;
-    padding: 10px 0 10px 20px;
-}
-
-aside > ul > li > a.active {
-    background-color: #4CAF50;
-}
-
-aside > ul > li > a:hover:not(.active) {
-    background-color: #555;
-}
-
-aside > h1 {
-    padding: 20px 0 20px 20px;
-    color: #fff;
-}
-
 #wrap {
     /* margin-top = header height */
     margin-top: 60px;
 }
 
-#open_close_button {
-    z-index: 4000;
-    float: right;
-    margin-right: 40px;
-    margin-top: 40px;
-}
-
-/*
-.div_iframe_1{
-    position: relative;
-}
-.div_iframe_2{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-}
-*/
 
 #header_title {
     color: black;
@@ -171,9 +107,18 @@ section, article {
 article {
     margin: 5px;
     padding: 5px;
+
+                /* 콘텐츠 가운데 정렬을 위해 적용. 복붙할 것 */
+                display: flex;
+                /* flex-direction을 row로 바꾸면 콘텐츠들이 가로로 배치된다. */
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
 }
 
 iframe {
-    height: calc(100% - 60px - 10px);
+    max-width: 1400px;
+    height: calc(100% - 70px);
     width: 100%;
 }
