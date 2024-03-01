@@ -121,7 +121,7 @@ function disable_fn(){
 function able_fn(){
     $("#select_color").removeAttr("disabled");
     $("#select_number").removeAttr("disabled");
-    $("#select_grade").removeAttr("disabled");
+    // $("#select_grade").removeAttr("disabled");
     $("#select_color").val("Red/Black")
     $("#select_number").val("Number")
     $("#select_grade").val("1st(1~12)/2nd(13~24)/3rd(25~36)")
