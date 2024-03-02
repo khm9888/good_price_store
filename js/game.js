@@ -166,20 +166,15 @@ function start_fn(){
     if (val_1 !="Red/Black" && trans_color == val_1){
         console.log("case1")
         result += coin*2
-        // let sentence = `축하합니다! 2배예요! ${result}원!!`
-        // alert(sentence)
+        
     } 
     if (val_2 !="Number" && trans_num == val_2){
         console.log("case2")
         result += coin*num_cnt
-        // let sentence = `축하합니다! ${num_cnt}배예요! ${result}원!!`
-        // alert(sentence)
     }
     if (val_3 !="1st(1~12)/2nd(13~24)/3rd(25~36)" && trans_line == val_3){
         console.log("case2")
         result += coin*3
-        // let sentence = `축하합니다! 3배예요! ${result}원!!`
-        // alert(sentence)
     }
     let bofore = Number($("#insert_coin").val())
     // 숫자로 변경해야함.
