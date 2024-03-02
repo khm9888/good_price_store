@@ -39,15 +39,30 @@
         <input type="number" min=0 max="1000" id="insert_coin" value="0">
         <b>원</b>
         <!-- <input type="text" id="insert_coin" disabled>원 -->
+
         <button id="insert_btn" onclick="setup_play()">초기 금액 확정</button>
+    </div>
+    <div>
+        <button id = "btn_0_ins" onclick="set_up_reset_ins()">초기화</button>
+        <button id = "btn_10_ins" onclick="set_up_10_ins()">10원</button>
+        <button id = "btn_100_ins" onclick="set_up_100_ins()">100원</button>
+        <button id = "btn_1000_ins" onclick="set_up_1000_ins()">1000원</button>
+        <button id = "btn_twice_ins" onclick="set_up_twice_ins()">2배</button>
     </div>
     <div>
         <B>이번 베팅 금액</B>
     </div>
     <div>
-        <input type="number" id="gamble_coin" min=0 max="1000">
+        <input type="number" id="gamble_coin" min=0 max="1000" value="0">
         <b>원</b>
         <button id="coin_fix_Btn" onclick="prepare_play()">금액 확정</button>
+    </div>
+    <div>
+        <button id = "btn_0_gam" onclick="set_up_reset_gamble()">초기화</button>
+        <button id = "btn_1_gam" onclick="set_up_1_gam()">1원</button>
+        <button id = "btn_10_gam" onclick="set_up_10_gam()">10원</button>
+        <button id = "btn_100_gam" onclick="set_up_100_gam()">100원</button>
+        <button id = "btn_twice_gam" onclick="set_up_twice_gam()">2배</button>
     </div>
     <div>
         <B>선택 옵션</B>
@@ -67,7 +82,9 @@
 
         <select onchange="disable_fn()" class="form-select" aria-label="Default select example" id="select_grade">
             <option selected>1st(1~12)/2nd(13~24)/3rd(25~36)</option>
-            <!-- <option value="1">Red</option> -->
+            <option value="1">1st(1~12)</option>
+            <option value="2">2nd(13~24)</option>
+            <option value="3">3rd(25~36)</option>
         </select>
     </div>
     <div>

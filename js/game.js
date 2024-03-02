@@ -5,7 +5,7 @@
 let num_cnt = 36;
 
 function setup_play() {
-    let coin = $("#insert_coin").val()
+    let coin = Number($("#insert_coin").val())
     // disabled 여부
     if ($("#insert_coin").is(":disabled")) {
         let sentence = "이미 베팅하셨습니다. 다음 스텝으로 넘어가세요!"
@@ -23,14 +23,6 @@ function setup_play() {
     }
 }
 
-// 추후 수정
-function end_play() {
-    let coin = $("#insert_coin").val()
-    if (coin == 0) {
-        $("#insert_coin").removeAttr("disabled");
-        alert("다시 시도해보세요!")
-    }
-}
 // 금액확정을 했는지 체크,
 // 이미 베팅했는지도 체크
 
@@ -139,13 +131,17 @@ function start_fn(){
     let val_3 = option_fn_3()
 
     let ans_num = $("#hidden_answer_1").val()
+    let ans_color = $("#hidden_answer_2").val() 
+
     let trans_num;
     if (ans_num =="0"){
         trans_num=num_cnt+1
     }else if (ans_num =="00"){
         trans_num=num_cnt+2
-    } 
-    let ans_color = $("#hidden_answer_2").val() 
+    }else{
+        trans_num=num_cnt
+    }
+
     let trans_color;
     if (ans_color=="Red"){
         trans_color=1
@@ -154,14 +150,19 @@ function start_fn(){
     }else{
         trans_color=3
     }
+
+    let trans_line = Math.ceil(ans_num/12);
+
     
     let result = 0
     let coin = Number($("#gamble_coin").val())
     console.log("trans_color", trans_color)
     console.log("val_1 ", val_1)
-    console.log("ans_num", ans_num)
     console.log("trans_num", trans_num)
     console.log("val_2", val_2)
+    console.log("trans_line", trans_line)
+    console.log("val_3", val_3)
+    console.log("===================")
     if (val_1 !="Red/Black" && trans_color == val_1){
         console.log("case1")
         result += coin*2
@@ -169,6 +170,10 @@ function start_fn(){
     if (val_2 !="Number" && trans_num == val_2){
         console.log("case2")
         result += coin*num_cnt
+    }
+    if (val_3 !="1st(1~12)/2nd(13~24)/3rd(25~36)" && trans_line == val_3){
+        console.log("case2")
+        result += coin*3
     }
     let bofore = Number($("#insert_coin").val())
     // 숫자로 변경해야함.
@@ -180,10 +185,57 @@ function start_fn(){
         let sentence = "이전 단계를 확인해주세요."
         alert(sentence)
     }
-    
     able_fn();
-
-
 }
 
+// 추후 수정
+function end_fn() {
+    let coin = Number($("#insert_coin").val())
+    if (coin == 0) {
+        $("#insert_coin").removeAttr("disabled");
+        alert("파산입니다! 다시 시도해보세요!")
+    }
+}
 
+function set_up_reset_ins(){
+    $("#insert_coin").val(0);
+    // let coin = Number($("#insert_coin").val());
+}
+
+function set_up_10_ins(){
+    let coin = Number($("#insert_coin").val());
+    $("#insert_coin").val(coin+10);
+}
+function set_up_100_ins(){
+    let coin = Number($("#insert_coin").val());
+    $("#insert_coin").val(coin+100);
+}
+function set_up_1000_ins(){
+    let coin = Number($("#insert_coin").val());
+    $("#insert_coin").val(coin+1000);
+}
+function set_up_twice_ins(){
+    let coin = Number($("#insert_coin").val());
+    $("#insert_coin").val(coin*2);
+}
+
+function set_up_reset_gamble(){
+    $("#gamble_coin").val(0);
+    // let coin = Number($("#insert_coin").val());
+}
+function set_up_1_gam(){
+    let coin = Number($("#gamble_coin").val());
+    $("#gamble_coin").val(coin+1);
+}
+function set_up_10_gam(){
+    let coin = Number($("#gamble_coin").val());
+    $("#gamble_coin").val(coin+10);
+}
+function set_up_100_gam(){
+    let coin = Number($("#gamble_coin").val());
+    $("#gamble_coin").val(coin+100);
+}
+function set_up_twice_gam(){
+    let coin = Number($("#gamble_coin").val());
+    $("#gamble_coin").val(coin*2);
+}

@@ -52,8 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
- 
-
     // }
 
     // 룰렛 그리기
@@ -66,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // 룰렛 그리기
         for (let i = 0; i < sections.length; i++) {
-            let num = sections[i].num;
             let color = sections[i].color;
             var angle = startAngle + i * arc;
 
@@ -149,7 +146,12 @@ document.addEventListener('DOMContentLoaded', function () {
             $("#hidden_answer_2").val(r_color)
             alert('선택된 아이템: ' + num + " / "+r_color);
             start_fn();
+            
+            end_fn();
+        
         }, spinTime);
+        
+
     }
 });
 
