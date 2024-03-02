@@ -228,9 +228,11 @@ function set_up_twice_ins(){
 }
 
 function set_up_reset_gam(){
-    let coin_1 = Number($("#insert_coin").val());
-    let coin_2 = Number($("#gamble_coin").val());
-    $("#insert_coin").val(coin_1+coin_2);
+    if ($("#gamble_coin").is(":disabled")) {
+        let coin_1 = Number($("#insert_coin").val());
+        let coin_2 = Number($("#gamble_coin").val());
+        $("#insert_coin").val(coin_1+coin_2);
+    }
     $("#gamble_coin").val(0);
     $("#gamble_coin").removeAttr("disabled");
     alert("초기화 하셨습니다. 다시 진행해주세요!")
