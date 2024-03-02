@@ -219,7 +219,7 @@ function set_up_twice_ins(){
     $("#insert_coin").val(coin*2);
 }
 
-function set_up_reset_gamble(){
+function set_up_reset_gam(){
     $("#gamble_coin").val(0);
     // let coin = Number($("#insert_coin").val());
 }

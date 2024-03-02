@@ -99,6 +99,28 @@ document.addEventListener('DOMContentLoaded', function () {
     var spinBtn = document.getElementById('spinBtn');
     spinBtn.addEventListener('click', spinRoulette);
 
+    var one = document.getElementById('btn_0_ins');
+    one.addEventListener('click', set_up_reset_ins);
+    var one = document.getElementById('btn_10_ins');
+    one.addEventListener('click', set_up_10_ins);
+    var one = document.getElementById('btn_100_ins');
+    one.addEventListener('click', set_up_100_ins);
+    var one = document.getElementById('btn_1000_ins');
+    one.addEventListener('click', set_up_1000_ins);
+    var one = document.getElementById('btn_twice_ins');
+    one.addEventListener('click', set_up_twice_ins);
+
+    var one = document.getElementById('btn_0_gam');
+    one.addEventListener('click', set_up_reset_gam);
+    var one = document.getElementById('btn_1_gam');
+    one.addEventListener('click', set_up_1_gam);
+    var one = document.getElementById('btn_10_gam');
+    one.addEventListener('click', set_up_10_gam);
+    var one = document.getElementById('btn_100_gam');
+    one.addEventListener('click', set_up_100_gam);
+    var one = document.getElementById('btn_twice_gam');
+    one.addEventListener('click', set_up_twice_gam);
+
     // 룰렛 회전 애니메이션
     function spinRoulette() {
         var spins = 10; // 회전 횟수
