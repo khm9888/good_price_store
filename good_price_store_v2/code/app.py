@@ -12,12 +12,13 @@ st.title('착한 가격 가게🏘️')
 
 
 # data_dir='https://github.com/khm9888/web_page_moonight/tree/master/good_price_store_v2/data_small/'
-data_dir='../data_small/'
+# data_dir='../data_small/'
 input_parquet_name = "good_price_store_info_3.parquet"
 st.write(f"test")
 # st.write(f"{data_dir}")
 # st.write(f"{input_parquet_name}")
 
+df = pq.read_table(f"{input_parquet_name}")
 df = pq.read_table(f"{data_dir}{input_parquet_name}")
 df.to_pandas()
 # df = pd.read_parquet(f"{data_dir}{input_parquet_name}", engine='pyarrow')
