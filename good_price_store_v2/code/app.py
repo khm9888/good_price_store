@@ -61,8 +61,9 @@ checkbox_btn_2 = st.sidebar.checkbox(sentence,True,2)
 if checkbox_btn_2:
     df = df[(df['city_county_district'] == select_city_county_district)]
 
-large_sector_list= list(df["large_sector"].unique())
-large_sector_list.sort()
+# large_sector_list= list(df["large_sector"].unique())
+count_one  = Counter(df["large_sector"])
+large_sector_list = sorted(count_one, key=count_one.get, reverse=True)
 
 add_one = '대분류'
 # large_sector_list.insert(0,add_one)
