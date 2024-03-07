@@ -49,7 +49,7 @@ if checkbox_btn_1:
 county_district_list= list(df["city_county_district"].unique())
 # count_one  = Counter(df["city_county_district"])
 # county_district_list = sorted(count_one, key=count_one.get, reverse=True)
-
+county_district_list.sort()
 add_one = '시/군/구'
 # county_district_list.insert(0,add_one)
 select_city_county_district = st.sidebar.selectbox(
@@ -62,6 +62,8 @@ if checkbox_btn_2:
     df = df[(df['city_county_district'] == select_city_county_district)]
 
 large_sector_list= list(df["large_sector"].unique())
+large_sector_list.sort()
+
 add_one = '대분류'
 # large_sector_list.insert(0,add_one)
 select_large_sector_list = st.sidebar.selectbox(
@@ -74,6 +76,8 @@ if checkbox_btn_3:
     df = df[(df['large_sector'] == select_large_sector_list)]
 
 sector_list= list(df["sector"].unique())
+sector_list.sort()
+
 add_one = '소분류'
 # sector_list.insert(0,add_one)
 select_sector_list = st.sidebar.selectbox(
@@ -86,6 +90,7 @@ if checkbox_btn_4:
     df = df[(df['sector'] == select_sector_list)]
 
 store_name_list= list(df["store_name"].unique())
+store_name_list.sort()
 add_one = '가게명'
 # store_name_list.insert(0,add_one)
 select_store_name_list = st.sidebar.selectbox(
