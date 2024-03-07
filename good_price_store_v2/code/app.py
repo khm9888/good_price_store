@@ -16,7 +16,7 @@ st.write(f"test")
 # st.write(f"{data_dir}")
 # st.write(f"{input_parquet_name}")
 
-df = pd.read_parquet(f"{data_dir}{input_parquet_name}")
+df = pd.read_parquet(f"{data_dir}{input_parquet_name}", engine='pyarrow')
 # df_b = df.copy()
 
 
