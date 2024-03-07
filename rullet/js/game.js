@@ -211,20 +211,36 @@ function set_up_reset_ins(){
 }
 
 function set_up_10_ins(){
-    let coin = Number($("#insert_coin").val());
-    $("#insert_coin").val(coin+10);
+    if ($("#insert_coin").is(":disabled")){}
+    else{
+        let coin = Number($("#insert_coin").val());
+        $("#insert_coin").val(coin+10);
+    }
 }
+
 function set_up_100_ins(){
-    let coin = Number($("#insert_coin").val());
-    $("#insert_coin").val(coin+100);
+    if ($("#insert_coin").is(":disabled")){}
+    else{
+        let coin = Number($("#insert_coin").val());
+        $("#insert_coin").val(coin+100);
+    }
 }
+
 function set_up_1000_ins(){
-    let coin = Number($("#insert_coin").val());
-    $("#insert_coin").val(coin+1000);
+    if ($("#insert_coin").is(":disabled")){}
+    else{
+        let coin = Number($("#insert_coin").val());
+        $("#insert_coin").val(coin+1000);
+    }
 }
+
 function set_up_twice_ins(){
-    let coin = Number($("#insert_coin").val());
-    $("#insert_coin").val(coin*2);
+    if ($("#insert_coin").is(":disabled")){
+    }
+    else{
+        let coin = Number($("#insert_coin").val());
+        $("#insert_coin").val(coin*2);
+    }
 }
 
 function set_up_reset_gam(){
@@ -239,18 +255,34 @@ function set_up_reset_gam(){
     // let coin = Number($("#insert_coin").val());
 }
 function set_up_1_gam(){
+    if ($("#gamble_coin").is(":disabled")) {
+    }
+    else{
     let coin = Number($("#gamble_coin").val());
     $("#gamble_coin").val(coin+1);
 }
+}
 function set_up_10_gam(){
+    if ($("#gamble_coin").is(":disabled")) {
+    }
+    else{
     let coin = Number($("#gamble_coin").val());
     $("#gamble_coin").val(coin+10);
 }
-function set_up_100_gam(){
-    let coin = Number($("#gamble_coin").val());
-    $("#gamble_coin").val(coin+100);
 }
+function set_up_100_gam(){
+    if ($("#gamble_coin").is(":disabled")) {
+    }
+    else{
+    let coin = Number($("#gamble_coin").val());
+    $("#gamble_coin").val(coin+10);
+}
+}
+
 function set_up_twice_gam(){
+    if ($("#gamble_coin").is(":disabled")) {}
+    else{
     let coin = Number($("#gamble_coin").val());
     $("#gamble_coin").val(coin*2);
+}
 }
