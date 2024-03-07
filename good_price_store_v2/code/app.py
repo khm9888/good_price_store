@@ -2,6 +2,7 @@
 
 import streamlit as st
 import pandas as pd
+import pyarrow.parquet as pq
 
 # Streamlit 앱 제목 설정
 st.title('착한 가격 가게🏘️')
@@ -16,7 +17,9 @@ st.write(f"test")
 # st.write(f"{data_dir}")
 # st.write(f"{input_parquet_name}")
 
-df = pd.read_parquet(f"{data_dir}{input_parquet_name}", engine='pyarrow')
+df = pq.read_table('example.parquet')
+df.to_pandas()
+# df = pd.read_parquet(f"{data_dir}{input_parquet_name}", engine='pyarrow')
 # df_b = df.copy()
 
 
