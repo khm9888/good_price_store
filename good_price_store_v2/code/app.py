@@ -10,8 +10,8 @@ st.title('착한 가격 가게🏘️')
 # from import_files._variable import *
 
 
-data_dir='../data_small/'
-input_parquet_name = "/good_price_store_info_3.parquet"
+data_dir='https://github.com/khm9888/web_page_moonight/tree/master/good_price_store_v2/data_small/'
+input_parquet_name = "good_price_store_info_3.parquet"
 # st.write(f"test")
 # st.write(f"{data_dir}")
 # st.write(f"{input_parquet_name}")
