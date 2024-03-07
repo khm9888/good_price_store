@@ -20,14 +20,20 @@ df=df[(df["latitude_v_world"]!=0)]
 df.drop(df[(df['latitude_v_world'] == 0)].index, inplace=True)
 # #난수 발생 하여 1000개의 값을 출력하는 코드
 
-# version2_1- insert를 모두 주석처리
+# version2_2- 값 순서 변경
+
+from collections import Counter
 
 # 그 데이터를 활용하여 필터링을 걸어준다.
 st.sidebar.title('Good_Price_Store🌸')
 
 # city_province_dict = {}
 
-province_list= list(df["city_province"].unique())
+# province_list= list(df["city_province"].unique())
+count_one  = Counter(df["city_province"])
+province_list = sorted(count_one, key=count_one.get, reverse=True)
+print(province_list)
+
 # select_one 변수에 사용자가 선택한 값이 지정됩니다
 add_one = "시/도"
 # province_list.insert(0,add_one)
@@ -40,7 +46,10 @@ checkbox_btn_1 = st.sidebar.checkbox(sentence,True,1)
 if checkbox_btn_1:
     df = df[(df['city_province'] == select_city_province)]
 
-county_district_list= list(df["city_county_district"].unique())
+# county_district_list= list(df["city_county_district"].unique())
+count_one  = Counter(df["city_county_district"])
+county_district_list = sorted(count_one, key=count_one.get, reverse=True)
+
 add_one = '시/군/구'
 # county_district_list.insert(0,add_one)
 select_city_county_district = st.sidebar.selectbox(
