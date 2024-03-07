@@ -2,8 +2,6 @@
 
 import streamlit as st
 import pandas as pd
-import numpy as np
-import folium
 
 # Streamlit 앱 제목 설정
 st.title('착한 가격 가게🏘️')
