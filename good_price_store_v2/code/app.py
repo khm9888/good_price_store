@@ -32,7 +32,7 @@ st.sidebar.title('Good_Price_Store🌸')
 # province_list= list(df["city_province"].unique())
 count_one  = Counter(df["city_province"])
 province_list = sorted(count_one, key=count_one.get, reverse=True)
-print(province_list)
+# print(province_list)
 
 # select_one 변수에 사용자가 선택한 값이 지정됩니다
 add_one = "시/도"
@@ -46,9 +46,9 @@ checkbox_btn_1 = st.sidebar.checkbox(sentence,True,1)
 if checkbox_btn_1:
     df = df[(df['city_province'] == select_city_province)]
 
-# county_district_list= list(df["city_county_district"].unique())
-count_one  = Counter(df["city_county_district"])
-county_district_list = sorted(count_one, key=count_one.get, reverse=True)
+county_district_list= list(df["city_county_district"].unique())
+# count_one  = Counter(df["city_county_district"])
+# county_district_list = sorted(count_one, key=count_one.get, reverse=True)
 
 add_one = '시/군/구'
 # county_district_list.insert(0,add_one)
